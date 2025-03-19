@@ -15,3 +15,11 @@ struct InventoryMVVMTests {
     }
 
 }
+enum Place : String, CaseIterable, Identifiable {
+    var id : Self { self }
+    case outside, inside, farm, grave
+}
+
+class Survivor {
+    var place : Place = .inside
+}
